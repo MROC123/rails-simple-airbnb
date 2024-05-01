@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+5.times do
+  Flat.create(
+    name: Faker::Address.street_name,
+    address: Faker::Address.full_address,
+    description: Faker::Lorem.sentence,
+    price_per_night: [75, 80, 90, 100].sample,
+    number_of_guests: [1, 2, 3, 4].sample
+  )
+end
